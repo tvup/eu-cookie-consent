@@ -22,6 +22,8 @@
     ],
     "require": {
         "php": ">7.1",
+        "ext-dom": "*",
+        "ext-mbstring": "*",
         "illuminate/support": "*"
     },
     "require-dev": {
