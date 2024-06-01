@@ -1,17 +1,22 @@
 {
-    "name": "the42coders/eu-cookie-consent",
+    "name": "tvup/eu-cookie-consent",
     "description": "To make your site compliant to the EU GDPR law you can use this package and customize it to your needs.",
     "keywords": [
         "42coders",
         "eu-cookie-consent"
     ],
-    "homepage": "https://github.com/42coders/eu-cookie-consent",
+    "homepage": "https://github.com/tvup/eu-cookie-consent",
     "license": "MIT",
     "type": "library",
     "authors": [
         {
             "name": "Max Hutschenreiter",
             "email": "max@42coders.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Torben Evald Hansen",
+            "email": "tvupper@gmail.com",
             "role": "Developer"
         }
     ],
