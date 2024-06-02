@@ -82,7 +82,7 @@ class EuCookieConsent
      */
     public static function getPopup($forced = false)
     {
-        if(!$forced && !empty($_COOKIE[config('eu-cookie-consent.cookie_name')])){
+        if(!$forced && !empty(request()->cookie(config('eu-cookie-consent.cookie_name')))){
             return '';
         }
 

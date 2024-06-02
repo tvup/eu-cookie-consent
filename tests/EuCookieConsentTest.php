@@ -30,10 +30,22 @@ class EuCookieConsentTest extends TestCase
     }
 
     /** @test */
-    public function getPopup_returns_empty_string_if_cookie_is_not_set()
+    public function getHTML_returns_empty_string_if_cookie_is_not_set()
     {
         $html = EuCookieConsent::getHTML('header');
         $this->assertEmpty($html);
+    }
+
+    /**
+     * @test
+     */
+    public function getPopup_returns_empty_string_if_cookie_is_set()
+    {
+        $response = $this->call('POST', '/saveTheCookie', ['session'=>'1', 'xsrf-token'=>'1'], ['laravel_eu_cookie_consent'=>json_encode(['session'=>'1', 'xsrf-token'=>'1'])]);
+        $response->assertCookie('laravel_eu_cookie_consent', '{"session":"1","xsrf-token":"1"}', false);
+
+        $response = EuCookieConsent::getPopup();
+        $this->assertEquals('', $response);
     }
 
 
