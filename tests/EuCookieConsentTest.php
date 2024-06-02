@@ -15,22 +15,19 @@ class EuCookieConsentTest extends TestCase
         return [EuCookieConsentServiceProvider::class];
     }
 
-    /** @test */
-    public function can_I_Use_for_not_set_cookie_returns_false()
+    public function test_can_I_Use_for_not_set_cookie_returns_false()
     {
         $canIUse = EuCookieConsent::canIUse('not_defined');
         $this->assertFalse($canIUse);
     }
 
-    /** @test */
-    public function getPopup_returns_html_if_cookie_is_not_set()
+    public function test_getPopup_returns_html_if_cookie_is_not_set()
     {
         $popup = EuCookieConsent::getPopup();
         $this->assertNotEmpty($popup);
     }
 
-    /** @test */
-    public function getPopup_returns_empty_string_if_cookie_is_not_set()
+    public function test_getPopup_returns_empty_string_if_cookie_is_not_set()
     {
         $html = EuCookieConsent::getHTML('header');
         $this->assertEmpty($html);
