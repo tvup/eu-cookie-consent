@@ -21,14 +21,14 @@
         }
     ],
     "require": {
-        "php": ">7.1",
+        "php": "^8.2",
         "ext-dom": "*",
         "ext-mbstring": "*",
         "illuminate/support": "*"
     },
     "require-dev": {
-        "orchestra/testbench": "^5.2",
-        "phpunit/phpunit": "^8.0"
+        "orchestra/testbench": "^9.1.1",
+        "phpunit/phpunit": "^10.5.17"
     },
     "autoload": {
         "psr-4": {
@@ -42,7 +42,7 @@
     },
     "scripts": {
         "test": "vendor/bin/phpunit",
-        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+        "test-coverage": "XDEBUG_MODE=coverage vendor/bin/phpunit --coverage-html coverage"
 
     },
     "config": {
